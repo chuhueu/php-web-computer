@@ -13,6 +13,6 @@
         </div>
     </footer>
 </body>
-<script src="./js/code.js"></script>
+<script src="./js/code.js?v=<?php echo time(); ?>"></script>
 
 </html>

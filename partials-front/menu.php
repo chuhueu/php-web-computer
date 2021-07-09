@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website - L08</title>
-    <!--Bootstrap and fontawesome-->
+    <!--Bootstrap and fontawesome and Jquery-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -15,7 +15,7 @@
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <!--style less-->
     <link rel="stylesheet/less" type="text/css" href="./css/style.less?v=<?php echo time(); ?>">
-    <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+    <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
     <!--Carousel-->
     <!--CSS-->
     <link rel="stylesheet" href="./OwlCarousel/owl.carousel.min.css">

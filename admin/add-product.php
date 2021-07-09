@@ -8,7 +8,7 @@
         }
     ?>
     <div class="wrapper">
-        <form action="" method="POST" >
+        <form action="" method="POST" enctype="multipart/form-data">
             <table class="tbl-30">
                 <tr>
                     <td>Title: </td>
@@ -64,6 +64,13 @@
                         <input type="radio" name="active" value="No">No
                     </td>
                 </tr>
+
+                <tr>
+                    <td>Product code: </td>
+                    <td>
+                            <input type="text" name="product_code">
+                    </td>
+                </tr>
                 <tr colspan="2">
                     <td><input type="submit" name="submit" value="Add Product" class="btn-primary"></td>
                 </tr>
@@ -78,10 +85,11 @@ if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $des = $_POST['description'];
     $price = $_POST['price'];
-    $image_name = $_POST['image_name'];
+    $image_name = $_FILES['image_name']['name'];
     $category = $_POST['category'];
     $featured = $_POST['featured'];
     $active = $_POST['active'];
+    $product_code = $_POST['product_code'];
 
     $sql2 = "INSERT INTO tbl_product SET
                 title = '$title',
@@ -90,7 +98,8 @@ if (isset($_POST['submit'])) {
                 image_name = '$image_name',
                 category_id = '$category',
                 featured = '$featured',
-                active = '$active'
+                active = '$active',
+                product_code = '$product_code'
             ";
     $res2 = mysqli_query($connection,$sql2) or die(mysqli_error($connection));
     if($res2 == true){

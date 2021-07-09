@@ -33,6 +33,7 @@
                     <th>image</th>
                     <th>Featured</th>
                     <th>Active</th>
+                    <th>Product Code</th>
                     <th>Actions</th>
                 </tr>
                 <?php
@@ -49,6 +50,7 @@
                                 $image_name = $rows['image_name'];
                                 $featured = $rows['featured'];
                                 $active = $rows['active'];
+                                $product_code = $rows['product_code'];
 
                                 ?>
                                 <tr>
@@ -69,6 +71,7 @@
                                     </td>
                                     <td><?php echo $featured ?></td>
                                     <td><?php echo $active ?></td>
+                                    <td><?php echo $product_code ?></td>
                                     <td>
                                         <a href="<?php echo SITE_URL ?>admin/update-product.php?id=<?php echo $id ?>">Update product</a>
                                         <br>

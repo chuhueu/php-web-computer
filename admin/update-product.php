@@ -17,6 +17,7 @@
                     $current_image = $row['image_name'];
                     $featured = $row['featured'];
                     $active = $row['active'];
+                    $product_code = $row['product_code'];
                }
            }
        }
@@ -92,6 +93,10 @@
                         <input type="radio" name="active" value="No"<?php if($active=='No'){echo "checked";} ?>>No
                     </td>
                 </tr>
+                <tr>
+                    <td>Product Code: </td>
+                    <td><input type="text" name="product_code" value="<?php echo $product_code  ?>"></td>
+                </tr>
                 <tr colspan="2">
                     <td><input type="submit" name="submit" value="Update product" class="btn-primary"></td>
                 </tr>
@@ -111,6 +116,7 @@
         $category_id = $_POST['category'];
         $featured = $_POST['featured'];
         $active = $_POST['active'];
+        $product_code = $_POST['product_code'];
         //upload image
         $image_name = $_FILES['image_name']['name'];
         if($image_name == ""){
@@ -124,7 +130,8 @@
                         image_name = '$image_name',
                         category_id = '$category_id',
                         featured = '$featured',
-                        active = '$active'
+                        active = '$active',
+                        product_code = '$product_code'
                         WHERE id = $id;
         ";
         $res2 = mysqli_query($connection, $sql2);
